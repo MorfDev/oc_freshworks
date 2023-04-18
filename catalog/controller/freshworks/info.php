@@ -231,6 +231,7 @@ class Info extends \Opencart\System\Engine\Controller
 					'name' => $product['name'],
 					'sku' => $product['model'],
 					'price' => $this->currency->format($product['price'], $order['currency_code']),
+					'total' => $this->currency->format($product['total'], $order['currency_code']),
 					'tax_rate' => (int)$product['tax'],
 					'ordered_qty' => (int)$product['quantity'],
 					'options' => $optionList
@@ -251,6 +252,7 @@ class Info extends \Opencart\System\Engine\Controller
 					'name' => $voucher['description'],
 					'sku' => 'voucher',
 					'price' => $this->currency->format($voucher['amount'], $order['currency_code']),
+					'total' => $this->currency->format($voucher['amount'], $order['currency_code']),
 					'tax_rate' => 0,
 					'ordered_qty' => 1,
 					'options' => $optionList
