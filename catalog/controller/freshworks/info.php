@@ -203,7 +203,7 @@ class Info extends \Opencart\System\Engine\Controller
 
 		$this->load->model('account/order');
 		$result = [];
-		$orderStatusList = [5, 15, 2, 3];
+		$orderStatusList = [1, 5, 15, 2, 3];
 		$totalSales = 0;
 		foreach ($orderList as $order) {
 			$orderItemInfo = [];
